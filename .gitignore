@@ -1,0 +1,11 @@
+.env
+.venv
+.vscode
+llamaindex-docs
+.db
+**.sqlite*
+**__pycache__
+uv.lock
+.pytest**
+.mypy**
+.benchmarks

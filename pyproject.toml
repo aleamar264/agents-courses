@@ -1,0 +1,47 @@
+[project]
+name = "capgemini"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.13.4",
+    "chromadb>=1.0.12",
+    "grandalf>=0.8",
+    "langchain>=0.3.25",
+    "langchain-chroma>=0.2.4",
+    "langchain-community>=0.3.25",
+    "langchain-ollama>=0.3.3",
+    "langchain-openai>=0.3.23",
+    "langchain-pinecone>=0.2.8",
+    "langchain-tavily>=0.2.7",
+    "langchainhub>=0.1.21",
+    "langgraph>=0.5.1",
+    "llama-index>=0.12.43",
+    "llama-index-embeddings-huggingface>=0.5.5",
+    "llama-index-embeddings-ollama>=0.6.0",
+    "llama-index-llms-ollama>=0.6.2",
+    "llama-index-readers-file>=0.4.9",
+    "llama-index-readers-web>=0.4.2",
+    "llama-index-vector-stores-pinecone>=0.6.0",
+    "matplotlib>=3.10.3",
+    "nbconvert>=7.16.6",
+    "numpy>=2.3.1",
+    "openai>=1.86.0",
+    "pandas[cudf]>=2.2.3",
+    "pinecone>=7.0.2",
+    "pyautogen[ollama]>=0.9",
+    "pyqt6>=6.9.1",
+    "pytest>=8.4.1",
+    "python-dotenv>=1.1.0",
+    "streamlit>=1.46.0",
+    "tavily-python>=0.7.9",
+    "unstructured[md]>=0.18.1",
+    "yfinance>=0.2.64",
+]
+
+[tool.uv.workspace]
+members = [
+    "other_agents",
+    "crewai_tutorial",
+]
