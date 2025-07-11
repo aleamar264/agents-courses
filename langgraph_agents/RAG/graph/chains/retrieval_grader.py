@@ -1,8 +1,9 @@
 from langchain_core.prompts import ChatPromptTemplate
 from pydantic import BaseModel, Field
 from langchain_ollama.chat_models import ChatOllama
+from graph.const import MODEL_OLLAMA
 
-llm = ChatOllama(model="mistral:7b")
+llm = ChatOllama(model=MODEL_OLLAMA)
 
 
 class GradeDocuments(BaseModel):
@@ -24,7 +25,7 @@ system = """
 grade_prompt = ChatPromptTemplate.from_messages(
     [
         ("system", system),
-        ("human", "Retrieved document: \n\n {document} \n\n User question {question}")
+        ("human", "Retrieved document: \n\n {documents} \n\n User question {question}")
     ]
 )
 
