@@ -179,24 +179,18 @@ Similarity influenced by:
 		- Topic modeling
 		- Document similarity
 		- Collaborative filtering
- $$
-	Cosine Similarity(A,B) = \frac{A\cdot{B}}{||A||\quad ||B||}
-$$
+ $$	Cosine Similarity(A,B) = \frac{A\cdot{B}}{||A||\quad ||B||}$$
 
 - Euclidean Distance - L2 Norm
 	- Best Uses:
 		- Clustering Analysis
 		- Anomaly & fraud detection
-$$
-Euclidean distance (A,B) = \sqrt{\sum\limits_{i=1}^n(A_i - B_i)^2}
-$$
+$$Euclidean distance (A,B) = \sqrt{\sum\limits_{i=1}^n(A_i - B_i)^2}$$
 - Dot Product
 	- Best Use:
 		- Image retrieval & matching
 		- Music Recommendation
-$$
-Dot Product(A,B) = A\cdot{B} = \sum\limits_{i=1}^nA_iB_i
-$$
+$$Dot Product(A,B) = A\cdot{B} = \sum\limits_{i=1}^nA_iB_i$$
 
 # Which to use?
 1. Project Requirements
