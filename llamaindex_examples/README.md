@@ -163,29 +163,29 @@ Uses LLMs as reasoning engine and execute non deterministic sequence of actions 
 - Run code
 
 
-```ad-example
-~~~python
-from llama_index.llms.ollama import Ollama
-from llama_index.core.agent import ReActAgent
-from llama_index.core.tools import FunctionTool
+>[!TIP]
+>```python
+>from llama_index.llms.ollama import Ollama
+>from llama_index.core.agent import ReActAgent
+>from llama_index.core.tools import FunctionTool
+>
+>
+>llm = Ollama("llama3.2")
+>
+>def write_haiku(topic: str)->str:
+>    """Writes a haiku about a given topic"""
+>    return llm.complete(f"Write me a haiku about {topic}").text
+>
+>def count_characteres(text:str)-> int:
+>    """Count the characteres in a text"""
+>    return len(text)
+>
+>if __name__ == "__main__":
+>    tool1 = FunctionTool.from_defaults(fn=write_haiku, name="write_haiku")
+>    tool2 = FunctionTool.from_defaults(fn=count_characteres, name="count_characteres")
+>    agent = ReActAgent.from_tools(tools=[tool1, tool2], llm=llm, verbose=True)
+>
+>    res = agent.query("Write me a haiku about tennis and count the characteres in it")
+>    print(res)
+>```
 
-
-llm = Ollama("llama3.2")
-
-def write_haiku(topic: str)->str:
-    """Writes a haiku about a given topic"""
-    return llm.complete(f"Write me a haiku about {topic}").text
-
-def count_characteres(text:str)-> int:
-    """Count the characteres in a text"""
-    return len(text)
-
-if __name__ == "__main__":
-    tool1 = FunctionTool.from_defaults(fn=write_haiku, name="write_haiku")
-    tool2 = FunctionTool.from_defaults(fn=count_characteres, name="count_characteres")
-    agent = ReActAgent.from_tools(tools=[tool1, tool2], llm=llm, verbose=True)
-
-    res = agent.query("Write me a haiku about tennis and count the characteres in it")
-    print(res)
-~~~
-```
