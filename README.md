@@ -81,7 +81,6 @@ API keys for custom and scalable integrations.
 # Prompt Engineer
 - **Techniques:** Zero-shot, Few-shot, One-shot prompting
 
-![[Pasted image 20250618122211.png]]
 
 ## What is a prompt
 The prompts are the programs for LLMs, this way we tell to the LLM how we want the answer depending of the input given.
@@ -396,23 +395,18 @@ Only Fine tuning after try everything and not get the desire result.
 4. Evolving base models and use cases
 	1. Required periodic re-training of fine tuned models.
 
-## Prompt Engineering vs RAG vs Fine tuning
-![[Pasted image 20250619114406.png]]
+
 
 ## Vector DB and Sematic Search with RAGs
 Vectors are numerical representation that capture the semantic meaning of data. Indexes and store vectors embeddings for fast retrieval and similarity search.
 
 To know more about vector db please refer to [[Vector DB#Transform unstructured data into vectors - Deep dive]]
 
-### Embedding models: OpenAI and Ollama
-![[Pasted image 20250619120325.png]]
 
 ### Disk-ANN
 Specialized version of ANN designed to operate efficient with vectors stored in disk rather than memory, this uses multi-thread and I/O optimization to access vector data from disk. Also, combine in memory-indexing for a subset of vector with disk-based storage.
 - Cost-Effective and Scalable
 - Latency and complex: Disk I/O operations can introduce delays.
-
-![[Pasted image 20250619121811.png]]
 
 ### Uses cases
 - Long-Term Memory for LLMs
@@ -424,6 +418,3 @@ Specialized version of ANN designed to operate efficient with vectors stored in 
 - Semantic search
 - Recommendation systems
 
-### Vector Databases
-
-![[Pasted image 20250619122415.png]]

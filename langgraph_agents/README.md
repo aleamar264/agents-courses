@@ -212,5 +212,36 @@ class AnswerQuestion(BaseModel):
 
 ```
 ### Agentic RAG
-### ReAct
+#### Self RAG
+>**Self-Reflective Retrieval-Augmented Generation (Self-RAG)** is a new framework to enhances an LM's quality and factuality through retrieval and self-reflection. Our framework trains a single arbitrary LM that adaptively **retrieves passages on-demand** (e.g., can retrieve multiple times during generation, or completely skip retrieval), and **generates and reflects on retrieved passages and its own generations** using special tokens, called **reflection tokens**. Generating reflection tokens makes the LM controllable during the inference phase, enabling it to tailor its behavior to diverse task requirements. *[Self-RAG: Learning to Retrieve, Generate and Critique through Self-Reflection](https://selfrag.github.io/)*
+#### Adaptative RAG
+>Adaptive RAG (Retrieval-Augmented Generation) is a technique that enhances the performance of RAG systems by dynamically adjusting the retrieval process based on the complexity of the query. Instead of using a single retrieval strategy for all queries, adaptive RAG analyzes the query to determine its complexity and then selects the most appropriate retrieval method. This approach leads to more efficient and accurate responses, especially when dealing with diverse and complex queries.
 ### Persistence
+LangGraph had a tool called **Checkpointer**, it's a layer of persisntece.
+This can be accomplished with several databases, one can be SQlite.
+```python
+from langgraph.checkpoint.sqlite import SqliteSaver
+memory = SqliteSaver.from_conn_string(":checkpoints.sqlite:")
+graph = workflow.compile(checkpointer=memory)
+```
+
+### Asycn Graph
+LangGraph run the branches in parallel without need of async.
+
+Cons:
+- State Conflict
+
+### LangGraph Studio
+In the video, he told us that LangGraph studio is only available for MAC, that is now deprecated, you can use Python or NodeJS to launch locally the LangGraph studio server.
+
+With python and UV add the following package
+```shell
+uv add "langgraph-cli[inmem]"
+```
+
+ Create a new empty folder, like `langgraph_agents/langgraph_studio`, go there and create the project with a template like this:
+ ```shell
+ uv run langgraph new . --template new-langgraph-project-python
+```
+
+This will create a LangGraph Studio project and launch the server in your browser.

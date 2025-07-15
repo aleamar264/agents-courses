@@ -24,14 +24,14 @@ Users often find LangChain fragile in production, hence the emphasis on rigorous
 ```
 
 ## Maintaining and updating LangChain Applications.
-We need permanently updating the information in the Vector database with new info, to return more accurate information to the user. [[Vector DB#Criterias]]
+We need permanently updating the information in the Vector database with new info, to return more accurate information to the user. [Vector DB](../chromadb_exampels/README.md#Criterias)
 
 - Memory: LangChain offer various type of memory like
 	- Conversation buffer memory
 	- Window memory
 	- Token buffer memory
 	- Summary memory
-![[Pasted image 20250624094012.png]]
+
 
 >[!TIP]
 >```python
